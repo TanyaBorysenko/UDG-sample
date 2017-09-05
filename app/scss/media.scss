@@ -1,0 +1,356 @@
+@media (max-width: 1220px) {
+  header {
+    .color-bg {
+      padding: 15px;
+    }
+  }
+  //section main. content and article
+  .link-next {
+    background: url(../img/arrow-right.png) no-repeat 95% 50%;
+  }
+
+  // section with articles
+  section {
+    &.section-content-articles {
+      .flex-container {
+        justify-content: center;
+      }
+    }
+    .section-images {
+      div {
+        article {
+          margin: 15px;
+          &:first-child {
+            margin: 15px;
+          }
+          &:nth-child(3) {
+            margin-right: 15px;
+          }
+        }
+      }
+      & > div:last-child {
+        text-align: left;
+      }
+      &.flex-container {
+        flex-flow: row wrap;
+        & > div:first-child {
+          flex-grow: 1;
+        }
+        .transform-hover {
+          & > div {
+            width: 330px;
+            height: 330px;
+          }
+        }
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  //footer top and bottom
+  .footer-top {
+    div:first-child {
+      h1 {
+        background: url(../img/restangle-h1.png) 8% 15% no-repeat;
+        padding-left: 0;
+        padding-top: 25px;
+      }
+    }
+  }
+  .footer-bottom {
+    span {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  //img with content and img
+  //block with articles
+  section .section-images > div:last-child {
+    text-align: center;
+  }
+
+  //footer-top
+  .footer-top {
+    div:first-child {
+      h1 {
+        text-align: left;
+        background: url(../img/restangle-h1.png) no-repeat;
+        padding-left: 50px;
+      }
+    }
+    form {
+      div {
+        display: block;
+        width: 100%;
+        &:first-child {
+          margin: 0 0 26px;
+        }
+      }
+    }
+  }
+
+  //footer bottom
+  .footer-bottom {
+    padding: 0;
+    text-align: center;
+    & > div {
+      & > div {
+        padding: 15px 0;
+      }
+      & > div:first-child {
+        background-color: $color-green-blue;
+        font-size: 14px;
+      }
+      & > div:nth-last-child(2) {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1024px) { // tablets styles strt
+  header {
+    img {
+      max-width: 50%;
+      & + p {
+        padding: 0;
+        font-size: 12px;
+      }
+    }
+    ul {
+      &.list-inline {
+        margin: 5px 0 0;
+        li {
+          padding: 0 5px;
+          a {
+            padding: 0 5px;
+            @include font-styles('Roboto Light', 15px, 28px);
+          }
+        }
+      }
+    }
+    h1 {
+      @include font-styles('Acrom ExtraBold', 50px, 50px);
+    }
+  }
+  .img-box-shadow {
+    .img-wrap {
+      margin-bottom: 30px;
+      padding-left: 40px;
+    }
+  }
+
+  .padding-top-bottom {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 783px){
+  .footer-bottom {
+    div {
+      div:last-child {
+        text-align: center;
+      }
+    }
+    span{
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 750px) {
+  // tablets styles end
+  //styles for header
+  header {
+    & > .color-bg {
+      & > .row {
+        padding-bottom: 10px;
+        & > div:first-child {
+          vertical-align: middle;
+        }
+      }
+    }
+    img {
+      max-width: 46%;
+      & + p {
+        display: inline-block;
+        margin: 0;
+        font-size: 10px;
+      }
+    }
+    h1 {
+      @include font-styles('Acrom ExtraBold', 40px, 40px);
+    }
+    .line {
+      padding: 0 15px;
+      &.show-small {
+        display: block;
+      }
+    }
+    ul {
+      &.list-inline {
+        margin: 0;
+      }
+    }
+  }
+
+  .slides-content {
+    //psevdoelements in header
+    & > div {
+      padding: 5px 0 5px 30px;
+      &:before {
+        content: url('../img/rectangle-white.png');
+        position: absolute;
+        left: -18%;
+        top: -50%;
+      }
+      &:after {
+        content: url('../img/rectangle-green.png');
+        position: absolute;
+        top: -60%;
+        right: -34%;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 749px) {
+
+  .styling-psevdoelements {
+    &:before, &:after {
+      transform: scale(0.5);
+    }
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+  header {
+    & > .color-bg {
+      & > .row {
+        & > div:first-child {
+          width: 50%;
+        }
+      }
+    }
+    img {
+      max-width: 30%;
+    }
+    nav {
+      display: none;
+      &.mobile {
+        display: block;
+      }
+    }
+    .mobile-active {
+      background: url("../img/bg-with-points.png") #439c92 no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      padding: 15px 0;
+      width: 100vw;
+      margin: 0;
+    }
+  }
+  .slides-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 20% 0;
+  }
+  .img-box-shadow {
+    .img-wrap {
+      margin-bottom: 25px;
+      padding-left: 40px;
+    }
+  }
+
+  section {
+    h1 {
+      font-size: 26px;
+      line-height: 26px;
+      margin: 5px 0 15px;
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .padding-top-bottom {
+    padding: 15px 0;
+  }
+
+  .part-bottom {
+    .border-numbers {
+      padding: 0 60px;
+      div {
+        width: 100%;
+        float: none;
+        border-left: none;
+        padding-left: 0;
+        padding-right: 0;
+        &:last-child {
+          border-right: none;
+        }
+        &:not(:last-child) {
+          border-bottom: 2px solid #8dc63f;
+        }
+        p {
+          margin: 20px 0 5px;
+        }
+      }
+    }
+  }
+
+  .section-content-articles {
+    h1 {
+      margin: 0 20px;
+    }
+    .flex-container {
+      padding: 0 15px;
+      flex-wrap: wrap;
+      & > div {
+        width: 70%;
+        margin-top: 15px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .img-box-shadow {
+    .img-wrap {
+      margin-bottom: 15px;
+      padding-left: 0;
+      display: block;
+      img {
+        width: auto;
+        height: auto;
+      }
+      &:after {
+        right: -10px;
+        top: 15px;
+        transform: scale(0.7);
+      }
+    }
+  }
+  .extend {
+    padding: 0 15px;
+  }
+  .section-content-articles {
+    .flex-container {
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+footer{
+  background-color: #f3fafa;
+}
+.footer-top {
+  color: $additional-color;
+  div {
+    div {
+      margin-bottom: 40px;
+    }
+
+    & > p {
+      @include font-styles('Roboto Light', 17px, 28px);
+      margin: 0 0 20px 0;
+      position: relative;
+      left: 10%;
+
+      &:before {
+        @include font-styles('FontAwesome', 40px, 28px);
+        content: '\f10b';
+        position: absolute;
+        left: -10%;
+        bottom: 22%;
+        color: $color-green-blue;
+      }
+      &:first-child {
+        &:before {
+          content: '\f041';
+        }
+      }
+      &:last-child {
+        &:before {
+          content: '\f003';
+          font-size: 20px;
+        }
+      }
+    }
+    @at-root.flex-container-column {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .flex-container-column {
+      padding-left: 100px;
+    }
+    input.form-control {
+      width: 48%;
+      display: inline-block;
+      border-radius: 0;
+    }
+    textarea.form-control {
+      border-radius: 0;
+    }
+    button.btn-default {
+      padding: 0 30px;
+    }
+
+    &.row {
+      & > div {
+        h1 {
+          @include font-styles('Acrom ExtraBold', 45px, 50px);
+          margin-top: 0;
+          padding: 0;
+          &.no-bg {
+            background: none;
+          }
+          &.styled {
+            position: relative;
+            margin: 0 0 45px;
+            &:before {
+              content: url(../img/restangle-h1.png);
+              position: absolute;
+              left: 15px;
+              top: -24px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  form {
+    div {
+      display: inline-block;
+      &:first-child {
+        margin: 0 26px 0 0;
+      }
+    }
+  }
+}
+
+//styles for footer bottom
+
+.footer-bottom {
+  background-color: #414042;
+  color: $additional-second-color;
+  padding: 1% 2%;
+  .fa {
+    font-size: 26px;
+    line-height: 25px;
+    color: #859997;
+    margin: 0 10px;
+  }
+  span {
+    @include font-styles('Roboto Light', 14px, 31px);
+  }
+
+}

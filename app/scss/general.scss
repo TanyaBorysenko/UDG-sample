@@ -1,0 +1,53 @@
+body{
+  font-family: 'Roboto Light';
+  color: white;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1{
+  margin-bottom: 45px;
+  font-weight: $font-weight-bold;
+
+}
+
+.flex-container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.color-bg{
+  color: $main-color;
+}
+
+.padding-top-bottom {
+  padding: 50px 0;
+}
+
+button, footer button.btn-default{
+  @include font-styles('Acrom ExtraBold', 16px, 60px);
+  font-weight: bold;
+  border:none;
+  background-color: $color-green-blue;
+  color:$main-color;
+  border-radius: 4px;
+}
+
+a{
+  color:$color-green-blue;
+  text-decoration: underline;
+  padding: 0;
+}
+
+header, .footer-bottom{
+  a {
+    text-decoration: none;
+  }
+}
+
+.line {
+  display: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+

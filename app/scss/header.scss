@@ -1,0 +1,166 @@
+header {
+  @include background-properties (url("../img/bg-img.png"));
+
+  nav {
+    &.mobile {
+      display: none;
+      position: static;
+      .links {
+        background: url("../img/bg-with-points.png") #439c92 no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        display: none;
+        z-index: 10;
+        width: 100vw; /* make it as width of screen */
+        height: calc(100vh - 49px);
+        left: 0;
+        top: 60px;
+        position: absolute;
+        li {
+          display: block;
+          a {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+          }
+        }
+      }
+      &.active {
+        .links {
+          display: block;
+          text-align: center;
+          .line {
+            margin: 12px 0 30px;
+          }
+          li{
+            a {
+              font-weight: 700;
+              color: #fff;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: baseline;
+    & + p{
+      padding: 0;
+      margin-left: 25px;
+    }
+  }
+
+  h1 {
+    @include font-styles('Acrom ExtraBold', 65px, 70px);
+    font-weight: $font-weight-bold;
+    margin-top: 0;
+  }
+
+  .color-bg {
+    @include background-properties(url('../img/bg-with-points.png'));
+    padding: 20px 30px;
+  }
+
+  p {
+    @include font-styles("Roboto Light", 12.73px, normal);
+    padding: 0 15px;
+  }
+  .fa {
+    color: $additional-second-color;
+  }
+  ul {
+    &.list-inline {
+      margin: 15px 0 0;
+      li {
+        padding: 0 10px;
+        &:last-child {
+          padding: 0;
+        }
+        a {
+          @include font-styles('Roboto Light', 17px, 35px);
+          color: $additional-second-color;
+          text-decoration: none;
+          padding: 0 10px;
+          &:visited, &:active {
+            color: $additional-second-color;
+          }
+          &:hover {
+            span {
+              border-top: 1px solid $color-green;
+            }
+          }
+          span {
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid $color-green;
+  border-radius: 1px;
+  color: $additional-second-color;
+  background-color: transparent;
+  padding: 0 7px;
+}
+
+//styles for carousel
+.slides {
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: center;
+}
+
+.slides-content {
+  max-width: 60%;
+  max-height: 50%;
+  border-left: 4px solid #8dc63f;
+  margin: 10% 0 20%;
+  position: relative;
+
+  //psevdoelements in header
+  & > div {
+    padding: 5px 0 5px 55px;
+    &:before {
+      content: url('../img/rectangle-white.png');
+      position: absolute;
+      left: -18%;
+      top: -50%;
+    }
+    &:after {
+      content: url('../img/rectangle-green.png');
+      position: absolute;
+      top: -60%;
+      right: -34%;
+    }
+  }
+
+  .item {
+    margin-top: 20px;
+  }
+}
+
+.styling-psevdoelements {
+  position: relative;
+  width: 100%;
+  &:before {
+    content: url('../img/two-rectangles-green.png');
+    position: absolute;
+    bottom: 0;
+  }
+  &:after {
+    content: url('../img/three-rectangles.png');
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+

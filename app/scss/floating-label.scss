@@ -1,0 +1,56 @@
+input, textarea {
+  &:focus, &:valid{
+    & ~ label {
+      font-size: 0.75em; /* read about rem, em, px, pt, % */
+      color: $additional-second-color;
+      top: -2.25rem;
+      -webkit-transition: all 0.125s ease;
+      transition: all 0.125s ease;
+    }
+  }
+}
+
+.styled-input {
+  position: relative;
+  padding: 5px 0 0 0;
+  width:47%;
+  &.wide {
+    width: 100%;
+  }
+  label {
+    color: #999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+  }
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #989b9c;
+  width:100%;
+  background-color: #f3fafa;
+  &:focus {
+    border-bottom: none;
+    & ~ span {
+      width: 100%;
+      -webkit-transition: all 0.075s ease;
+      transition: all 0.075s ease;
+    }
+  }
+  & ~ span {
+    display: block;
+    width: 0;
+    height: 3px;
+    background: $color-green-blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.125s ease;
+    transition: all 0.125s ease;
+  }
+}

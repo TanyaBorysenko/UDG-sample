@@ -1,0 +1,167 @@
+// general rules in parts of section
+
+.link-next {
+  background: url("../img/arrow-right.png") no-repeat 100% 50%;
+  padding-right: 40px;
+}
+
+//section part with content and image
+section {
+  color: $additional-color;
+  a {
+    @include font-styles ('Acrom ExtraBold', 15px, 60px);
+    font-weight: $font-weight-bold;
+  }
+  p {
+    @include font-styles('Roboto Light', 17px, 35px);
+  }
+  .row {
+    &.padding-top-bottom {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+h2 {
+  @include font-styles('Acrom ExtraBold', 28px, 32px);
+  font-weight: $font-weight-bold;
+}
+
+.img-box-shadow {
+  .img-wrap {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    img {
+      @include box-shadow();
+      max-width: 100%;
+      @include static-width-img(350px,350px);
+      position: relative;
+    }
+    &:after {
+      content: url('../img/two-rectangles-light-dark-green.png');
+      position: absolute;
+      right: -30px;
+      top: -35px;
+    }
+  }
+}
+
+.extend {
+  padding: 0 0 0 55px;
+}
+
+//section part with articles
+section {
+  .color-bg {
+    @include background-color-atop(rgba(23, 23, 23, 0.4), 13% 8%);
+  }
+  h1 {
+    @include font-styles('Acrom ExtraBold', 45px, 50px);
+  }
+}
+
+.section-images {
+  div {
+    article {
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      &:first-child {
+        margin: 0 30px 30px 0;
+      }
+      &:nth-child(3) {
+        margin-right: 30px;
+      }
+    }
+  }
+  & > div {
+    &:last-child {
+      font-size: 0;
+      text-align: right;
+    }
+    .link-next{
+      padding-left: 55px;
+    }
+  }
+
+  .transform-hover {
+    &:hover {
+      @include scale;
+      .color-bg {
+        @include background-color-atop(rgba(40, 112, 83, 0.5), 13% 8%);
+        h2 {
+          text-decoration: underline;
+          -moz-text-decoration-color: #8dc63f;
+          text-decoration-color: #8dc63f;
+        }
+      }
+
+      h3 {
+        display: block;
+      }
+    }
+    & > div {
+      @include static-width-img(350px,350px);
+    }
+    h3 {
+      display: none;
+    }
+  }
+  .button-style {
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: normal;
+  }
+
+}
+
+.img-top-left {
+  position: relative;
+  @include static-width-img(350px,350px);
+  @include background-properties(url("../img/hostel-KPI-img1.png") 50%);
+
+  //background:linear-gradient(rgba(139, 139, 141, 0.5), rgba(139, 139, 141, 0.5)), url(../img/hostel-KPI-img1.png);
+}
+
+.img-bottom-left {
+  @include background-properties (url("../img/house-club.png") 50%);
+}
+
+.img-top-right {
+  @include background-properties (url("../img/campus.png") 50%);
+}
+
+.img-bottom-right {
+  @include background-properties (url("../img/hostel-KPI-img2.png") 50%);
+}
+
+//part bottom
+.part-bottom {
+  @include background-properties(url("../img/hostel-bigger.png") 100% 35%);
+  .color-bg {
+    @include background-color-atop(rgba(40, 112, 83, 0.5), 3%);
+  }
+  > div:first-child {
+    margin: 0;
+  }
+  .border-numbers {
+    div {
+      border-left: 2px solid #8dc63f;
+      padding: 30px 15px;
+    }
+    div {
+      &:last-child {
+        border-right: 2px solid #8dc63f;
+      }
+    }
+  }
+  span {
+    @include font-styles('Acrom ExtraBold', 75px, 60px);
+    font-weight: $font-weight-bold;
+  }
+  p {
+    @include font-styles('Roboto Light', 19px, 25px);
+  }
+}

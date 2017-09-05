@@ -1,0 +1,70 @@
+section{
+background: url("../img/slanting-bg.png") no-repeat 0 -9%;
+}
+
+.section-content-articles {
+  color: $additional-color;
+}
+
+.for-styles-articles {
+  & > div {
+    margin: 0 15px;
+    position: relative;
+    @include box-shadow;
+    article {
+      padding: 30px 25px;
+      border: 1px solid $additional-second-color;
+    }
+    p {
+      color: $additional-second-color;
+      @include font-styles('Roboto Light', 16px, 25px);
+      margin: 15px 0 50px;
+    }
+    button{
+      position: absolute;
+      bottom: 0;
+      left:0;
+      width: 100%;
+      color: $main-color;
+      border-radius: 0;
+    }
+  }
+
+  h2{
+    @include font-styles('Acrom ExtraBold', 19px, 30px);
+    font-weight:$font-weight-bold;
+  }
+}
+
+.news-img-first {
+  @include background-properties(url('../img/news-street.png'));
+  @include static-width-img(280px,165px);
+}
+
+.news-img-second {
+  @include background-properties(url('../img/news-old-building.png'));
+  @include static-width-img(280px,165px);
+}
+
+.news-img-third {
+  @include background-properties(url('../img/news-hostel.png'));
+  @include static-width-img(280px,165px);
+}
+
+section, footer {
+  div:first-child {
+    h1:first-child{
+      background: url("../img/restangle-h1.png") no-repeat;
+      padding: 25px 0 0 55px;
+    }
+  }
+}
+
+//styles for block with hover
+.flex-container {
+  &.for-styles-articles {
+    & > div:hover {
+      @include scale;
+    }
+  }
+}
